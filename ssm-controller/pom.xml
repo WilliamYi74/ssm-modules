@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<!--    <groupId>com.ywy</groupId>-->
+    <artifactId>ssm-controller</artifactId>
+<!--    <version>1.0-SNAPSHOT</version>-->
+    <packaging>war</packaging>
+    <parent>
+        <groupId>com.ywy</groupId>
+        <artifactId>ssm-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../ssm-parent/pom.xml</relativePath>
+    </parent>
+    <dependencies>
+        <!--springmvc start-->
+        <!--springm-webmvc包含了spring的基础核心包 所以spring的核心包都不需要再显示导入-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+                <!--排除依赖-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework</groupId>-->
+<!--                    <artifactId>spring-context</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+        </dependency>
+        <!--springmvc end-->
+        <!--servlet start-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <!--servlet end-->
+        <dependency>
+            <groupId>com.ywy</groupId>
+            <artifactId>ssm-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

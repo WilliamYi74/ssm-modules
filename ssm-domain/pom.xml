@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<!--    <groupId>com.ywy</groupId>-->
+    <artifactId>ssm-domain</artifactId>
+<!--    <version>1.0-SNAPSHOT</version>-->
+    <packaging>jar</packaging>
+    <!--指定父工程坐标和位置-->
+    <parent>
+        <groupId>com.ywy</groupId>
+        <artifactId>ssm-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../ssm-parent/pom.xml</relativePath>
+    </parent>
+    <dependencies>
+        <!--spring上下文-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <!--指定作用域范围为当前编译和测试期 运行时不参与 同时也不会传递到controller controller有springmvc包含了spring 所以不需要传递过去-->
+<!--            <scope>provided</scope>-->
+        </dependency>
+        <!--格式化日期到前台的处理joda date start-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <!--joda date end-->
+        <!--jackson start-->
+        <!--jackson-databind包含了Jackson-core和Jackson-annotations 所以这两不用再显示导入-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <!--jackson end-->
+    </dependencies>
+</project>
