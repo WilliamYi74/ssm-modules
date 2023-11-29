@@ -187,4 +187,18 @@
             </testResource>
         </testResources>
     </build>
+    <!--发布到私服配置管理 子工程引用parent时父工程的version一定要和父工程里写的version一致 否则就会引用不到报错-->
+    <distributionManagement>
+        <repository>
+            <!--id和url要和settings.xml的sever配置一样才能拿到访问私服的用户名和密码进行访问-->
+            <id>local-releases</id>
+            <name>local-releases</name>
+            <url>http://localhost:12580/repository/local-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>local-snapshots</id>
+            <name>local-snapshots</name>
+            <url>http://localhost:12580/repository/local-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
