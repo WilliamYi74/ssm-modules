@@ -190,9 +190,9 @@
     <!--发布到私服配置管理 子工程引用parent时父工程的version一定要和父工程里写的version一致 否则就会引用不到报错-->
     <distributionManagement>
         <repository>
-            <!--id和url要和settings.xml的sever配置一样才能拿到访问私服的用户名和密码进行访问-->
+            <!--id要和settings.xml的server配置的id一样才能拿到访问私服的账号密码访问私服 如果不一致就会导致deploy失败 因为maven也不知道要deploy到哪个仓库去-->
             <id>local-releases</id>
-            <name>local-releases</name>
+            <name>local-releases</name><!--仓库名-->
             <url>http://localhost:12580/repository/local-releases/</url>
         </repository>
         <snapshotRepository>
